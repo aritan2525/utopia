@@ -34,8 +34,6 @@
     const currentPage = window.location.pathname;
 
     if (currentPage === "/index.html") {
-
-        document.addEventListener("DOMContentLoaded", function() {
             const slides = document.querySelectorAll(".slide");
             let currentSlide = 0;
 
@@ -50,7 +48,6 @@
             }
 
             setInterval(nextSlide, 6000);
-        });
     }
 
     //swiper-thumbs
