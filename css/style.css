@@ -804,7 +804,7 @@ p {
     display: inline-block;
     width: 25px;
     height: 3px;
-    background-color: #494949;
+    background-color: #797979;
     margin: 6px 0;
     transition: 0.3s;
     border-radius: 2px;
@@ -826,6 +826,7 @@ p {
 .hamburger-menu-icon.active span:nth-child(1) {
     top: 28px;
     transform: translateY(6px) rotate(-45deg);
+    background-color: #494949;
 }
 
 .hamburger-menu-icon.active span:nth-child(2) {
@@ -835,6 +836,7 @@ p {
 .hamburger-menu-icon.active span:nth-child(3) {
     top: 40px;
     transform: translateY(-6px) rotate(45deg);
+    background-color: #494949;
 }
 
 .parallel-menu .logo img {
