@@ -30,11 +30,8 @@
     });
 
     // slideshow
-
-    document.addEventListener("DOMContentLoaded", function() {
-        //ページのURLを取得
-        const currentPage = window.location.pathname;
-    });
+    //ページのURLを取得
+    const currentPage = window.location.pathname;
     
     if (currentPage === "/index.html") {
             const slides = document.querySelectorAll(".slide");
