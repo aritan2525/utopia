@@ -33,7 +33,7 @@
     //ページのURLを取得
     const currentPage = window.location.pathname;
 
-    if (currentPage === "/index.html") {
+    if (currentPage === "/utopia/index.html") {
             const slides = document.querySelectorAll(".slide");
             let currentSlide = 0;
 
