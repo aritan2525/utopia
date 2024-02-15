@@ -27,7 +27,6 @@
             parallelNav.classList.toggle("panelactive");
             content.classList.toggle("mainblur");
         });
-    });
 
     // slideshow
     //ページのURLを取得
@@ -130,7 +129,6 @@
 
     //gallery
     if (currentPage === "/photos.html") {
-       document.addEventListener('DOMContentLoaded', function () {
         const grid = new Muuri('.grid', {
             items: '.item',
             layout: {
@@ -167,6 +165,6 @@
         });
 
        grid.layout();
-       });
-    }  
+    } 
+    });
 }
