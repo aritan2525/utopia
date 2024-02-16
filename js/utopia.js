@@ -37,7 +37,7 @@
         const currentPage = window.location.pathname;
         console.log("ページ取得できてる");
 
-    if (currentPage === "/index.html") {
+    if (currentPage === "index.html") {
         console.log("indexページもOK");
             const slides = document.querySelectorAll(".slide");
             let currentSlide = 0;
