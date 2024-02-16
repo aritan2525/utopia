@@ -34,8 +34,7 @@
     document.addEventListener("DOMContentLoaded", function() {
         const currentPage = window.location.pathname;
 
-        console.log(currentPage);
-    if (currentPage.endsWith("/index.html")) {
+    if (currentPage.endsWith("/")) {
         console.log("indexページもOK");
             const slides = document.querySelectorAll(".slide");
             let currentSlide = 0;
@@ -54,7 +53,7 @@
     }
 
     //swiper-thumbs
-    if (currentPage === '/accommodation.html') {
+    if (currentPage === '/accommodation') {
         const mainSlider = new Swiper('.swiper-container', {
             slidesPerView: 1,
             loop: false,
@@ -134,7 +133,6 @@
     //gallery
     if (currentPage === "/photos") {
 
-         console.log(currentPage);
         const grid = new Muuri('.grid', {
             items: '.item',
             layout: {
