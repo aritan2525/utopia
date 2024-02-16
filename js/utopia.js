@@ -34,7 +34,7 @@
     document.addEventListener("DOMContentLoaded", function() {
         const currentPage = window. location.pathname;
 
-    if (currentPage === "/index.html") {
+    if (currentPage.endsWith("/index.html")) {
         console.log("indexページもOK");
             const slides = document.querySelectorAll(".slide");
             let currentSlide = 0;
