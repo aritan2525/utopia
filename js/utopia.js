@@ -35,7 +35,8 @@
     //ページのURLを取得
     document.addEventListener("DOMContentLoaded", function() {
         const currentPage = window.location.pathname;
-        console.log("ページ取得はできてる"};
+        console.log("ページ取得はできてる");
+    };
 
     if (currentPage === "/index.html") {
         console.log("indexページだよ"};
