@@ -35,7 +35,6 @@
         const currentPage = window.location.pathname;
 
     if (currentPage.endsWith("/")) {
-        console.log("indexページもOK");
             const slides = document.querySelectorAll(".slide");
             let currentSlide = 0;
 
