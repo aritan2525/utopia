@@ -29,17 +29,16 @@
         });
     });
 
-    console.log("hamburger-menuまでは大丈夫");
+    console.log("humburger-menuまでは大丈夫");
 
     // slideshow
     //ページのURLを取得
     document.addEventListener("DOMContentLoaded", function() {
         const currentPage = window.location.pathname;
-        console.log("ページ取得はできてる");
-    });
+        console.log("ページ取得できてる");
 
     if (currentPage === "/index.html") {
-        console.log("indexページだよ");
+        console.log("indexページもOK");
             const slides = document.querySelectorAll(".slide");
             let currentSlide = 0;
 
