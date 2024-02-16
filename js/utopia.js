@@ -39,7 +39,7 @@
     });
 
     if (currentPage === "/index.html") {
-        console.log("indexページだよ"};
+        console.log("indexページだよ");
             const slides = document.querySelectorAll(".slide");
             let currentSlide = 0;
 
