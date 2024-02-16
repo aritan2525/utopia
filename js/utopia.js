@@ -27,11 +27,13 @@
             parallelNav.classList.toggle("panelactive");
             content.classList.toggle("mainblur");
         });
+    });
 
     // slideshow
     //ページのURLを取得
-    const currentPage = window.location.pathname;
-    
+    document.addEventListener("DOMContentLoaded", function() {
+        const currentPage = window.location.pathname;
+
     if (currentPage === "/index.html") {
             const slides = document.querySelectorAll(".slide");
             let currentSlide = 0;
@@ -129,6 +131,7 @@
 
     //gallery
     if (currentPage === "/photos.html") {
+
         const grid = new Muuri('.grid', {
             items: '.item',
             layout: {
@@ -165,6 +168,6 @@
         });
 
        grid.layout();
-    } 
+    }  
     });
 }
