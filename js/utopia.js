@@ -32,7 +32,7 @@
     // slideshow
     //ページのURLを取得
     document.addEventListener("DOMContentLoaded", function() {
-        const currentPage = window. location.pathname;
+        const currentPage = window.location.pathname;
 
     if (currentPage.endsWith("/index.html")) {
         console.log("indexページもOK");
