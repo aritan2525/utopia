@@ -132,7 +132,7 @@
     }
 
     //gallery
-    if (currentPage === "/photos.html") {
+    if (currentPage === "/photos") {
 
          console.log(currentPage);
         const grid = new Muuri('.grid', {
