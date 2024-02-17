@@ -387,17 +387,15 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
     justify-content: flex-end; 
     align-items: center; 
-    opacity: 0;
     transition: opacity 0.3s;
 }
 
 .image-link:hover .grid-text {
-    opacity: 1;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .grid-text p {
