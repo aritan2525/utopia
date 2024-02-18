@@ -1,2 +1,3 @@
 [[forms]]
   name = "contact"
+  submit = "/about"
