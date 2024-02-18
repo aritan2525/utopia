@@ -169,10 +169,10 @@
 
        grid.layout();
     }  
-
         //submit
         function submitForm(event) {
             event.preventDefault();
             window.location.href = window.location.pathname;
+        };
     });
 }
