@@ -174,5 +174,15 @@
             event.preventDefault();
             window.location.href = window.location.pathname;
         };
+
+        
+        const contactForm = document.querySelectorAll('.contact-form');
+
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            alert('Message sent successfully!');
+        });
+        
     });
 }
