@@ -15,7 +15,7 @@ jobs:
 
       - name: Deploy to Netlify
         run: |
-          curl -X POST -d '{}' -H 'Content-Type: application/json' -u ${{ secrets.BASIC_AUTH_USERNAME }}:${{ secrets.BASIC_AUTH_PASSWORD }} https://api.netlify.com/api/v1/sites/bed74570-5637-4a88-9daf-4eda431e0ae9/builds
+          curl -X POST -d '{}' -H "Content-Type: application/json" -u "${{ secrets.BASIC_AUTH_USERNAME }}:${{ secrets.BASIC_AUTH_PASSWORD }}" https://api.netlify.com/api/v1/sites/bed74570-5637-4a88-9daf-4eda431e0ae9/builds
         env:
           BASIC_AUTH_USERNAME: ${{ secrets.BASIC_AUTH_USERNAME }}
           BASIC_AUTH_PASSWORD: ${{ secrets.BASIC_AUTH_PASSWORD }}
