@@ -1,1 +1,22 @@
+name: Deploy to Netlify with Basic Auth
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Deploy to Netlify
+        run: |
+          curl -X POST -d '{}' -H 'Content-Type: application/json' -H 'Authorization: Bearer ${{ secrets.NETLIFY_AUTH_TOKEN }}' https://api.netlify.com/api/v1/sites/
+bed74570-5637-4a88-9daf-4eda431e0ae9/builds
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
 
