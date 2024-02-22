@@ -172,9 +172,18 @@
         //submit
         const contactForm = document.querySelector('#form');
 
-        contactForm.addEventListener('submit', function(event) {
+        // contactForm.addEventListener('submit', function(event) {
+        //     event.preventDefault();
+        //     alert('Message sent successfully!');
+        // });
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(event) {
             event.preventDefault();
             alert('Message sent successfully!');
-        });
+            });
+        } else {
+            console.error('Contact form not found.');
+        }
     });
 }
