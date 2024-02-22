@@ -170,20 +170,13 @@
        grid.layout();
     }  
         //submit
-        const contactForm = document.querySelector('#form');
+        if(currentPage === "/about") {
+            const contactForm = document.querySelector('#form');
 
-        // contactForm.addEventListener('submit', function(event) {
-        //     event.preventDefault();
-        //     alert('Message sent successfully!');
-        // });
-
-        if (contactForm) {
             contactForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            alert('Message sent successfully!');
+                event.preventDefault();
+                alert('Message sent successfully!');
             });
-        } else {
-            console.error('Contact form not found.');
         }
     });
 }
