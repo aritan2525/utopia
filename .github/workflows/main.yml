@@ -1,4 +1,4 @@
-name: Deploy to Netlify with Basic Auth
+name: Netlify Deployment
 
 on:
   push:
@@ -10,12 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+    - name: Checkout Repository
+      uses: actions/checkout@v2
 
-      - name: Deploy to Netlify
-        run: |
-          curl -X POST -d '{}' -H "Content-Type: application/json" -u "${{ secrets.BASIC_AUTH_USERNAME }}:${{ secrets.BASIC_AUTH_PASSWORD }}" https://api.netlify.com/api/v1/sites/bed74570-5637-4a88-9daf-4eda431e0ae9/builds
-        env:
-          BASIC_AUTH_USERNAME: ${{ secrets.BASIC_AUTH_USERNAME }}
-          BASIC_AUTH_PASSWORD: ${{ secrets.BASIC_AUTH_PASSWORD }}
+    - name: Deploy to Netlify
+      run: |
+        curl -X POST -d '{}' -H 'Content-Type: application/json' -u ${{ secrets.NETLIFY_BASIC_AUTH_USER }}:${{ secrets.NETLIFY_BASIC_AUTH_PASSWORD }} https://api.netlify.com/api/v1/sites/bed74570-5637-4a88-9daf-4eda431e0ae9/build
