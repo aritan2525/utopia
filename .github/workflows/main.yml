@@ -15,7 +15,8 @@ jobs:
 
     - name: Deploy to Netlify
       run: |
-        curl -X POST -d '{}' -H 'Content-Type: application/json' -H "Authorization: Basic $(echo -n ${{ secrets.NETLIFY_BASIC_AUTH_USER }}:${{ secrets.NETLIFY_BASIC_AUTH_PASSWORD }} | base64)" ${{ secrets.NETLIFY_BUILD_HOOK }}
+        curl -X POST -d '{}' -H 'Content-Type: application/json' -H "Authorization: Basic $(echo -n $NETLIFY_BASIC_AUTH_USER:$NETLIFY_BASIC_AUTH_PASSWORD | base64)" https://api.netlify.com/build_hooks/https://api.netlify.com/build_hooks/65d9579d0ae7ed95019d9ada
+
       env:
         NETLIFY_BASIC_AUTH_USER: ${{ secrets.NETLIFY_BASIC_AUTH_USER }}
         NETLIFY_BASIC_AUTH_PASSWORD: ${{ secrets.NETLIFY_BASIC_AUTH_PASSWORD }}
