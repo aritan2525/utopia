@@ -1,1 +1,21 @@
+name: Netlify Deployment
 
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Deploy to Netlify
+      run: |
+        curl -X POST -d '{}' -H 'Content-Type: application/json' -H "Authorization: Basic $(echo -n $NETLIFY_BASIC_AUTH_USER:$NETLIFY_BASIC_AUTH_PASSWORD | base64)" https://api.netlify.com/build_hooks/65d9579d0ae7ed95019d9ada
+      env:
+        NETLIFY_BASIC_AUTH_USER: ${{ secrets.NETLIFY_BASIC_AUTH_USER }}
+        NETLIFY_BASIC_AUTH_PASSWORD: ${{ secrets.NETLIFY_BASIC_AUTH_PASSWORD }}
