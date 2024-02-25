@@ -1,3 +1,5 @@
+import { next } from "@vercel/edge";
+
 export const middleware = (req: NextRequest) => {
   const authorizationHeader = req.headers.get('authorization')
 
