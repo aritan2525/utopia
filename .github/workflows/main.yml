@@ -1,4 +1,4 @@
-name: Netlify Deployment
+name: Deploy to Netlify with Basic Auth
 
 on:
   push:
@@ -13,9 +13,14 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v4
 
+    - name: Set Environment Variables
+      run: |
+        echo "NETLIFY_BASIC_AUTH_USER=$(echo -n ${{ secrets.YOUR_BASIC_AUTH_USER }} | base64)" >> $GITHUB_ENV
+        echo "NETLIFY_BASIC_AUTH_PASSWORD=$(echo -n ${{ secrets.YOUR_BASIC_AUTH_PASSWORD }} | base64)" >> $GITHUB_ENV
+
     - name: Deploy to Netlify
       run: |
-        curl -X POST -d '{}' -H 'Content-Type: application/json' -H "Authorization: Basic $(echo -n $NETLIFY_BASIC_AUTH_USER:$NETLIFY_BASIC_AUTH_PASSWORD | base64)" https://api.netlify.com/build_hooks/65d9579d0ae7ed95019d9ada
+        curl -X POST -d '{}' -H 'Content-Type: application/json' -H "Authorization: Basic $NETLIFY_BASIC_AUTH_USER:$NETLIFY_BASIC_AUTH_PASSWORD" https://api.netlify.com/build_hooks/65d9579d0ae7ed95019d9ada
       env:
-        NETLIFY_BASIC_AUTH_USER: ${{ secrets.NETLIFY_BASIC_AUTH_USER }}
-        NETLIFY_BASIC_AUTH_PASSWORD: ${{ secrets.NETLIFY_BASIC_AUTH_PASSWORD }}
+        NETLIFY_BASIC_AUTH_USER: ${{ secrets.YOUR_BASIC_AUTH_USER }}
+        NETLIFY_BASIC_AUTH_PASSWORD: ${{ secrets.YOUR_BASIC_AUTH_PASSWORD }}
