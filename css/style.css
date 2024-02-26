@@ -184,14 +184,14 @@ a {
 .slideshow {
     position: relative; 
     overflow: hidden;
-    max-width: 980px;
     height: 633px;  
+    width: 100%;
 }
 
 .slide.active, .slide {
     position: absolute;
-    width: 980px;
     height: 633px;
+    width: 100%;
     opacity: 0;
     transition: opacity 1s ease-in-out;
     overflow: hidden;
