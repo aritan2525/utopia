@@ -201,6 +201,10 @@ a {
     opacity: 1;
 }
 
+.slideshow img {
+    width: 100%;
+}
+
 #slide-text {
     position: absolute;
     top: 65%;
