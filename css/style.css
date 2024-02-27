@@ -397,7 +397,12 @@ a {
     margin-bottom: 70px;
 }
 
+.vertical-format {
+    width: fit-content;
+    margin: auto;
+
 .vertical-format img {
+    width: 100%;
     margin: 0 auto 30px auto;
     display: block;
 }
@@ -415,17 +420,18 @@ a {
 .horizontal-format-reverse  {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 .horizontal-format img,
 .horizontal-format-reverse img {
-    width: 460px;
+    width: 40%;
     height: 575px;
 }
 
 .horizontal-format p,
 .horizontal-format-reverse p {
-    width: 460px;
+    width: 640px;
     display: flex;
     align-items: center;
 }
@@ -476,7 +482,8 @@ a {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-bottom: 30px;
+    margin: 0 auto 30px auto;
+    width: fit-content;   
 }
 
 .aligned-photos img {
@@ -651,7 +658,6 @@ textarea {
 
 .grid {
     position: relative;
-    width: fit-content;
 }
 
 .item {
@@ -856,21 +862,13 @@ p {
     margin: auto;
 }
 
-.vertical-format img {
-    width: 95%;
-}
-
-#activity .vertical-format img {
-    width: 95%;
-}
-
 .vertical-format p {
     width: auto;
 }
 
 .horizontal-format img,
 .horizontal-format-reverse img {
-    width: 50%;
+    width: 40%;
     height: 80%;
 }
 
@@ -912,6 +910,26 @@ p {
 }
 
 @media screen and (max-width: 768px) {
+
+.horizontal-format,
+.horizontal-format-reverse {
+    flex-direction: column;
+}
+
+.horizontal-format img, 
+.horizontal-format-reverse img {
+    width: 90vw;
+}
+
+.horizontal-format p, 
+.horizontal-format-reverse p {
+    width: fit-content;
+    margin: auto;
+}
+
+.flex-box {
+    flex-direction: column;
+}
 
 #submit {
     width: 100%;
