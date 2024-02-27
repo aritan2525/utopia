@@ -407,11 +407,6 @@ a {
     display: block;
 }
 
-#activity .vertical-format img {
-    width: fit-content;
-    margin: 0 auto 30px auto;
-}
-
 .vertical-format p {
     width: 640px;
 }
@@ -713,7 +708,7 @@ p {
 }
 
 #footer {
-    width: auto;
+    width: 100%;
     height: auto;
 }
 
@@ -868,7 +863,7 @@ p {
 
 .horizontal-format img,
 .horizontal-format-reverse img {
-    width: 40%;
+    width: 50%;
     height: 80%;
 }
 
