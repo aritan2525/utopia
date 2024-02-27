@@ -63,6 +63,7 @@ a {
 #content {
     display: flex;
     flex: 1;
+    width: 100%;
     position: relative;
     background: #eeeeee;
 }
@@ -169,8 +170,9 @@ a {
 
 .slide.active, .slide {
     position: absolute;
-    height: 100vh;
     width: 100%;
+    /* height: 633px; */
+    height: 100vh;
     opacity: 0;
     transition: opacity 1s ease-in-out;
     overflow: hidden;
@@ -304,6 +306,7 @@ a {
 
 .matter {
     position: relative;
+    /* width: 980px; */
     padding: 20px;
     box-sizing: border-box;
 }
@@ -318,6 +321,7 @@ a {
 .matter h1 {
     font-family: 'DM Serif Display';
 }
+
 
 #matter-grid {
     margin-top: 100px;
@@ -400,6 +404,7 @@ a {
 .vertical-format {
     width: fit-content;
     margin: auto;
+}
 
 .vertical-format img {
     width: 100%;
@@ -439,7 +444,7 @@ a {
     margin-right: 20px;
 }
 
-#activity .info {
+.info {
     background-color: #a3d6cc;
     color: #000000;
     text-align: center;
@@ -447,7 +452,7 @@ a {
     margin-bottom: 50px;
 }
 
-#activity .info p {
+.info p {
     width: fit-content;
     margin: auto;
 }
@@ -462,8 +467,7 @@ a {
     font-size: 18px;
 }
 
-.items
-{
+.items {
     margin: auto;
 }
 
@@ -473,20 +477,21 @@ a {
     margin-right: 5px;
 }
 
-.aligned-photos {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 0 auto 30px auto;
-    width: fit-content;   
-}
-
 .aligned-photos img {
     margin-right: 15px;
 }
 
 .aligned-photos img:last-child {
     margin-right: 0;
+}
+
+.aligned-photos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* margin-bottom: 30px; */
+    margin: 0 auto 30px auto;
+    width: fit-content;
 }
 
 .swiper-container {
@@ -694,7 +699,7 @@ p {
 
 #content {
     margin: 0 auto;
-    max-width: 100%;
+    width: 100%;
 }
 
 #top,
@@ -704,7 +709,7 @@ p {
 
 #main {
     margin: 0 auto;
-    max-width: 100%;
+    width: 100%;
 }
 
 #footer {
