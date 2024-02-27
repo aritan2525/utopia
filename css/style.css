@@ -891,6 +891,10 @@ p {
     width: auto;
 }
 
+.swiper-container {
+    width: 100%;
+}
+
 .mayor {
     flex-direction: column;
 }
