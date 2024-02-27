@@ -439,7 +439,7 @@ a {
     margin-right: 20px;
 }
 
-.info {
+#activity .info {
     background-color: #a3d6cc;
     color: #000000;
     text-align: center;
@@ -447,7 +447,7 @@ a {
     margin-bottom: 50px;
 }
 
-.info p {
+#activity .info p {
     width: fit-content;
     margin: auto;
 }
