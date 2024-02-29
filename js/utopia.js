@@ -169,14 +169,5 @@
 
        grid.layout();
     }  
-        //submit
-        if(currentPage === "/about") {
-            const contactForm = document.querySelector('#form');
-
-            contactForm.addEventListener('submit', function(event) {
-                event.preventDefault();
-                alert('Message sent successfully!');
-            });
-        }
     });
 }
