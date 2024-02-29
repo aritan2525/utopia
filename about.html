@@ -10,7 +10,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Ephesis&family=Lato:wght@100;300;400&display=swap" rel="stylesheet">
-    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LfVA4UpAAAAADm4iChi0bjwV32dTOD2cAEOcJsP"></script>
 </head>
 <body id="about">
     <div class="parallel-menu">
@@ -132,13 +131,5 @@
         </div>
     </div>
     <script src="/js/utopia.js"></script>
-    <script>
-  function onClick(e) {
-    e.preventDefault();
-    grecaptcha.enterprise.ready(async () => {
-      const token = await grecaptcha.enterprise.execute('6LfVA4UpAAAAADm4iChi0bjwV32dTOD2cAEOcJsP', {action: 'LOGIN'});
-    });
-  }
-</script>
 </body>
 </html>
